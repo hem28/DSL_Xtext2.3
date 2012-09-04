@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.mydsl/src-gen" editDirectory="/org.xtext.mydsl.edit/src"
+    editorDirectory="/org.xtext.mydsl.editor/src" modelPluginID="org.xtext.mydsl"
+    forceOverwrite="true" modelName="MyDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.mydsl.edit"
+    editorPluginID="org.xtext.mydsl.editor" runtimeVersion="2.8">
+  <genPackages prefix="MyDsl" basePackage="org.xtext" disposableProviderFactory="true"
+      ecorePackage="MyDsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyDsl.ecore#//BuiltinType">
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/int"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/time"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/date"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/decimal"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/dateTime"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/positiveInteger"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/nonNegativeInteger"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/token"/>
+      <genEnumLiterals ecoreEnumLiteral="MyDsl.ecore#//BuiltinType/base64Binary"/>
+    </genEnums>
+    <genClasses ecoreClass="MyDsl.ecore#//Interface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Interface/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Interface/nsURI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Interface/items"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Item/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Operation/ins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Operation/outs"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Event">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Event/outs"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Inparam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Inparam/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Inparam/type"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Outparam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Outparam/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Outparam/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

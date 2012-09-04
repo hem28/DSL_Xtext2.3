@@ -1,0 +1,51 @@
+grammar org.xtext.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/MyDsl"
+
+Interface:
+        "Interface" name=ID
+        "namespace:" nsURI=STRING
+        ( items += Item )*
+        ;
+ 
+Item:
+        Operation | Event
+        ;
+ 
+Operation:
+        "Operation" name=ID
+        (ins += Inparam |
+         outs += Outparam)*
+    ;
+ 
+ 
+Event:
+        "Event" name=ID
+        (outs=Outparam)
+    ;
+ 
+Inparam:
+        "[in]" name=ID
+                ":" type=BuiltinType
+;
+ 
+Outparam:
+        "[out]" name=ID
+                ":" type=BuiltinType
+;
+ 
+ 
+enum BuiltinType:
+      boolean
+    | integer
+    | int
+    | time
+    | date
+    | string
+    | decimal
+    | dateTime
+    | positiveInteger
+    | nonNegativeInteger
+    | token
+    | base64Binary
+    ;
